@@ -1,6 +1,9 @@
 {
     "name": "kenjis/ci3-like-captcha",
+    "type": "library",
     "description": "CodeIgniter3-like Captcha",
+    "keywords": ["captcha","codeigniter"],
+    "homepage": "https://github.com/kenjis/ci3-like-captcha",
     "license": "MIT",
     "authors": [
         {
