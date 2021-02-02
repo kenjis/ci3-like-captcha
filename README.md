@@ -12,7 +12,7 @@ This project provide CodeIgniter3-like Captcha.
 ## Installation
 
 ```sh-session
-$ composer require --dev kenjis/ci3-like-captcha
+$ composer require kenjis/ci3-like-captcha
 ```
 
 ## Usage
