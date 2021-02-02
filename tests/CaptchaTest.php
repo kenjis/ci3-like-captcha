@@ -33,8 +33,14 @@ class CaptchaTest extends TestCase
         ];
         $cap = Captcha::createCaptcha($data);
 
-        $file = __DIR__ . '/' . $cap['filename'];
         $this->assertSame($data['word'], $cap['word']);
+
+        $this->assertMatchesRegularExpression(
+            '!<img  src="http://example\.com/captcha/.*\.png" style="width: 150px; height: 30px; border: 0;" alt="captcha" />!',
+            $cap['image']
+        );
+
+        $file = __DIR__ . '/' . $cap['filename'];
         $this->assertFileExists($file);
 
         unlink($file);
