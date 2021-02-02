@@ -1,14 +1,45 @@
 # CodeIgniter3-like Captcha
 
+This project provide CodeIgniter3-like Captcha.
+
+- This is **not** 100% compatible with CI3's CAPTCHA Helper.
+- This uses [gregwar/captcha](https://github.com/Gregwar/Captcha).
+
+## Requirements
+
+- PHP 7.2 or later
+
 ## Installation
 
-    composer install
+```sh-session
+$ composer require --dev kenjis/ci3-like-captcha
+```
 
-## Available Commands
+## Usage
 
-    composer test              // Run unit test
-    composer tests             // Test and quality checks
-    composer cs-fix            // Fix the coding style
-    composer sa                // Run static analysys tools
-    composer run-script --list // List all commands
-    
+See <https://codeigniter.com/userguide3/helpers/captcha_helper.html>.
+
+Instead of `create_captcha()`, use `Captcha::createCaptcha()`.
+
+```php
+use Kenjis\CI3Like\Captcha\Captcha;
+
+$vals = [
+    'word'      => random_string('numeric', 4),
+    'img_path'  => FCPATH . 'captcha/',
+    'img_url'   => base_url() . '/captcha/',
+];
+$cap = Captcha::createCaptcha($vals);
+
+$data = [
+    'captcha_id'   => '',
+    'captcha_time' => $cap['time'],
+    'word'         => $cap['word'],
+];
+```
+
+## License
+
+This package is licensed using the MIT License.
+
+Please have a look at [`LICENSE`](LICENSE).
