@@ -21,6 +21,8 @@ class Captcha
      * @param   string                           $fontPath Server path to font (deprecated)
      *
      * @return  array<string, mixed>
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public static function createCaptcha(
         $data = '',
