@@ -7,7 +7,7 @@ This project provide CodeIgniter3-like Captcha.
 
 ## Requirements
 
-- PHP 7.2 or later
+- PHP 7.3 or later
 
 ## Installation
 
