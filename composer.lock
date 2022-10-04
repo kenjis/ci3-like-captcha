@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "813840925223e6714ef20e1d02f0d221",
+    "content-hash": "2d3aba2fedd6090d2f63be5bcbda0d0a",
     "packages": [
         {
             "name": "s1syphos/php-simple-captcha",
-            "version": "2.2.1",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
-                "url": "https://github.com/S1SYPHOS/php-simple-captcha.git",
-                "reference": "db83849ce466ab184e7c06dc58314fc09250f109"
+                "url": "https://github.com/kenjis/php-simple-captcha.git",
+                "reference": "058021dfc376147ea8911e19b4d99208a33043ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/S1SYPHOS/php-simple-captcha/zipball/db83849ce466ab184e7c06dc58314fc09250f109",
-                "reference": "db83849ce466ab184e7c06dc58314fc09250f109",
+                "url": "https://api.github.com/repos/kenjis/php-simple-captcha/zipball/058021dfc376147ea8911e19b4d99208a33043ed",
+                "reference": "058021dfc376147ea8911e19b4d99208a33043ed",
                 "shasum": ""
             },
             "require": {
@@ -33,13 +33,24 @@
             "suggest": {
                 "thiagoalessio/tesseract_ocr": "Provides better results when building against OCR. Requires 'tesseract-ocr' to be installed."
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "SimpleCaptcha\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "cs-dry": [
+                    "php-cs-fixer fix --dry-run --diff"
+                ],
+                "cs-fix": [
+                    "php-cs-fixer fix"
+                ],
+                "test": [
+                    "phpunit"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -76,10 +87,10 @@
                 "spam-protection"
             ],
             "support": {
-                "issues": "https://github.com/S1SYPHOS/php-simple-captcha/issues",
-                "source": "https://github.com/S1SYPHOS/php-simple-captcha/tree/2.2.1"
+                "source": "https://github.com/kenjis/php-simple-captcha/tree/develop",
+                "issues": "https://github.com/kenjis/php-simple-captcha/issues"
             },
-            "time": "2022-08-05T09:52:58+00:00"
+            "time": "2022-10-04T00:58:58+00:00"
         }
     ],
     "packages-dev": [
@@ -1873,7 +1884,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "s1syphos/php-simple-captcha": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
