@@ -14,6 +14,8 @@ This project provides CodeIgniter3-like Captcha.
 Add the following to your project `composer.json`:
 
 ```json
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "repositories": [
         {
             "type": "vcs",
