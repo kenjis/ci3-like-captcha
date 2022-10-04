@@ -11,6 +11,19 @@ This project provides CodeIgniter3-like Captcha.
 
 ## Installation
 
+Add the following to your project `composer.json`:
+
+```json
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/kenjis/php-simple-captcha.git"
+        }
+    ],
+```
+
+And run:
+
 ```sh-session
 $ composer require kenjis/ci3-like-captcha
 ```
