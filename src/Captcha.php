@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace Kenjis\CI3Like\Captcha;
 
-use Gregwar\Captcha\CaptchaBuilder;
+use SimpleCaptcha\Builder;
 
+use function assert;
 use function is_string;
 use function microtime;
 use function rtrim;
@@ -43,14 +44,16 @@ class Captcha
 
         $word = $data['word'] ?? null;
 
+        assert(is_string($word) || ($word === null));
+
         $imgTag = self::createImageTag($data, $imgUrl, $imgFilename);
 
-        $builder = new CaptchaBuilder($word);
+        $builder = new Builder($word);
         $builder->build();
         $builder->save($imgPath . $imgFilename);
 
         return [
-            'word' => $word ?? $builder->getPhrase(),
+            'word' => $word ?? $builder->phrase,
             'time' => $now,
             'image' => $imgTag,
             'filename' => $imgFilename,
