@@ -3,11 +3,11 @@
 This project provides CodeIgniter3-like Captcha.
 
 - This is **not** 100% compatible with CI3's CAPTCHA Helper.
-- This uses [gregwar/captcha](https://github.com/Gregwar/Captcha).
+- This uses [php-simple-captcha](https://codeberg.org/S1SYPHOS/php-simple-captcha).
 
 ## Requirements
 
-- PHP 7.3 or later
+- PHP 7.4 or later
 
 ## Installation
 
